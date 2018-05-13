@@ -1,2 +1,2 @@
 # communities-system
-For example
+This project was created to demonstrate my skills
