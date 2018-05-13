@@ -1,2 +1,2 @@
-# communities-system
+# Communities-system
 This project was created to demonstrate my skills
