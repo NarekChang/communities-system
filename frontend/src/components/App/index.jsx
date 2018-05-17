@@ -1,9 +1,10 @@
 import React from 'react';
+import s from './styles.styl'
 
 class App extends React.Component {
   render() {
     return (
-      <div></div>
+      <div className='wrapper'>asdkljalksdjlk</div>
     )
   }
 }
