@@ -67,7 +67,7 @@ module.exports = () => {
 
     devServer: {
       port: PORT,
-      host: 'local.rain.wtf',
+      host: 'local.bubujka.org',
       disableHostCheck: true,
       overlay: true,
       historyApiFallback: {

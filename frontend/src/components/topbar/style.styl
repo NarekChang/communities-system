@@ -1,0 +1,35 @@
+.wrapper
+  background-color #24272c
+  color #fff
+  padding 10px
+  .logo
+    display inline-block
+    height 50px
+    line-height 50px
+    padding-left 60px
+    background url(./images/logo.jpg) no-repeat
+    background-size contain
+  .logout
+    display inline-block
+    float right
+    color #fff
+    font-size 14px
+    line-height 50px
+    position relative
+    font-weight 200
+    text-decoration none
+    &:after
+      content ''
+      position absolute
+      left 0
+      right 0
+      margin auto
+      bottom 14px
+      width 0
+      height 1px
+      display inline-block
+      background-color #fff
+      animation()
+    &:hover:after
+      width 100%
+      animation()

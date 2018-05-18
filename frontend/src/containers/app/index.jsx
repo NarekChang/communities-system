@@ -2,9 +2,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
-import MainPage from '_pages/main';
+import MainContainer from '../main-container';
 
-const App = () => (<MainPage />);
+const App = () => (<div><MainContainer /></div>);
 
 export default hot(module)(App);
-
