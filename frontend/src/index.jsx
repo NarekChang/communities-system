@@ -1,7 +1,11 @@
+// @flow
 import React from 'react';
 import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import 'reset.css';
+import 'normalize.css';
 
-import App from './components/App'
+import App from './containers/app';
 
-render(<AppContainer><App /></AppContainer>, document.getElementById('app'));
+import './style.styl';
+
+render(<App />, document.getElementById('app'));
