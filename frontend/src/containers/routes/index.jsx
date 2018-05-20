@@ -29,4 +29,4 @@ const routes = (
   </div>
 )
 
-export default routes
+export default routes;

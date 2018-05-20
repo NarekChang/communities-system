@@ -4,8 +4,9 @@ import { AppContainer } from 'react-hot-loader';
 import { applyMiddleware, compose, createStore } from 'redux';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
-import { routerMiddleware, connectRouter } from 'connected-react-router';
+import { connectRouter } from 'connected-react-router';
 import { Provider } from 'react-redux';
+import { createLogger } from 'redux-logger';
 
 import rootReducer from './reducers'
 
@@ -17,14 +18,15 @@ import App from './containers/app';
 import './style.styl';
 
 const history = createBrowserHistory()
+const logger = createLogger({
+  ...history,
+})
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
   connectRouter(history)(rootReducer),
   composeEnhancer(
-    applyMiddleware(
-      routerMiddleware(history),
-    ),
+    applyMiddleware(logger),
   ),
 )
 

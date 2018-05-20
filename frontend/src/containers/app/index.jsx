@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router';
 
-import MainContainer from '../main-container';
+import routes from '../routes';
 
 const App = ({ history }) => {
   return (
     <ConnectedRouter history={history}>
-      {MainContainer}
+      {routes}
     </ConnectedRouter>
   )
 }
