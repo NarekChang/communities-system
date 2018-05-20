@@ -61,6 +61,7 @@ module.exports = () => {
         _constants: path.resolve(__dirname, 'src/constants'),
         _components: path.resolve(__dirname, 'src/components'),
         _pages: path.resolve(__dirname, 'src/pages'),
+        _actions: path.resolve(__dirname, 'src/actions'),
         _api: path.resolve(__dirname, 'src/api'),
       },
     },

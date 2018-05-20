@@ -1,7 +1,5 @@
-// @flow
-import React from 'react';
-
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from 'react'
+import { Route, Switch } from 'react-router'
 
 import TopBar from '_components/topbar';
 
@@ -13,23 +11,22 @@ import CommunityPage from '_pages/community';
 
 import ms from '../../style.styl';
 
-const MainContainer = () => {
-  return (
-    <BrowserRouter>
-      <div>
-        <TopBar />
-        <div className={ms.row}>
-          <div className={ms.wrapper}>
-            <Route exact path="/signup" component={SignUp} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/logout" component={Redirect} />
-            <Route exact path="/communities" component={Communities} />
-            <Route exact path="/:id/communities" component={CommunityPage} />
-          </div>
-        </div>
+const routes = (
+  <div>
+    <TopBar />
+    <div className={ms.row}>
+      <div className={ms.wrapper}>
+        <Switch>
+          <Route exact path="/logout" component={Redirect} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/communities" component={Communities} />
+          <Route exact path="/:id/communities" component={CommunityPage} />
+          <Route path="/" component={Redirect} />
+        </Switch>
       </div>
-    </BrowserRouter>
-  )
-};
+     </div>
+  </div>
+)
 
-export default MainContainer;
+export default routes

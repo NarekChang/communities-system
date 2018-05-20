@@ -1,9 +1,19 @@
-// @flow
 import React from 'react';
-import { hot } from 'react-hot-loader';
+import PropTypes from 'prop-types';
+import { ConnectedRouter } from 'connected-react-router';
 
 import MainContainer from '../main-container';
 
-const App = () => (<div><MainContainer /></div>);
+const App = ({ history }) => {
+  return (
+    <ConnectedRouter history={history}>
+      {MainContainer}
+    </ConnectedRouter>
+  )
+}
 
-export default hot(module)(App);
+App.propTypes = {
+  history: PropTypes.object,
+};
+
+export default App;
